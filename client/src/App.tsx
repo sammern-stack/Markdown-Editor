@@ -1,8 +1,13 @@
+import { lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+
+const HomePage = lazy(() => import("@/pages/Home/Home"));
+
 const App = () => {
   return (
-    <div className="markdown-editor">
-      <h1>Markdown Editor</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
   );
 };
 
