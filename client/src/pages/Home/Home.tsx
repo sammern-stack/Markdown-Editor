@@ -1,8 +1,8 @@
-import "./Home.module.scss";
+import styles from "./Home.module.scss";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className={styles.home}>
       <h1>Home Page</h1>
     </div>
   );
