@@ -2,7 +2,7 @@ import Markdown from "@/models/markdown.model.js";
 import type {
   MarkdownSchema,
   MarkdownQueryFilter,
-  MarkdownCreateBody,
+  MarkdownUpdateBody,
 } from "@/types/markdown.type.js";
 import {
   ConflictError,
@@ -42,7 +42,7 @@ export const createNewMarkdown = async (markdown: MarkdownSchema) => {
 
 export const updateMarkdown = async (
   id: string,
-  updates: MarkdownCreateBody,
+  updates: MarkdownUpdateBody,
 ) => {
   const { _id } = await searchMarkdown(id);
   return await Markdown.findByIdAndUpdate(_id, updates, queryOptions);
