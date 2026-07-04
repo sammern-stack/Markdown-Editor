@@ -1,5 +1,6 @@
 import { connect } from "mongoose";
 import { MONGODB_URI } from "./env.js";
+import type { QueryOptions } from "mongoose";
 
 export const connectDB = async () => {
   try {
@@ -9,4 +10,9 @@ export const connectDB = async () => {
     console.log(`Unexpected error while connecting to db: ${err}`);
     process.exit(1);
   }
+};
+
+export const queryOptions: QueryOptions = {
+  returnDocument: "after",
+  runValidators: true,
 };

@@ -22,3 +22,9 @@ export class NotFoundError extends AppError {
     super(`${resource} not found`, 404);
   }
 }
+
+export class ConflictError extends AppError {
+  constructor(resource: string) {
+    super(`Document with the same ${resource} already exists`);
+  }
+}
