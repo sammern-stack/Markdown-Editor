@@ -1,5 +1,9 @@
 import Markdown from "@/models/markdown.model.js";
-import type { MarkdownSchema } from "@/types/markdown.type.js";
+import type {
+  MarkdownSchema,
+  MarkdownQueryFilter,
+  MarkdownCreateBody,
+} from "@/types/markdown.type.js";
 import {
   ConflictError,
   NotFoundError,
@@ -7,15 +11,11 @@ import {
 } from "@/utils/customErrors.js";
 import { isMongooseId } from "@/utils/validators.js";
 import { queryOptions } from "@/config/db.js";
-import type { QueryFilter } from "mongoose";
-
-type MarkdownQueryFilter = QueryFilter<MarkdownSchema>;
 
 const searchMarkdown = async (idOrMeta: string | MarkdownQueryFilter) => {
   const isId = typeof idOrMeta === "string";
-  if (isId && !isMongooseId(idOrMeta as string)) {
+  if (isId && !isMongooseId(idOrMeta as string))
     throw new ValidationError("Invalid ID");
-  }
 
   const markdown = isId
     ? await Markdown.findById(idOrMeta as string)
@@ -42,7 +42,7 @@ export const createNewMarkdown = async (markdown: MarkdownSchema) => {
 
 export const updateMarkdown = async (
   id: string,
-  updates: Partial<MarkdownSchema>,
+  updates: MarkdownCreateBody,
 ) => {
   const { _id } = await searchMarkdown(id);
   return await Markdown.findByIdAndUpdate(_id, updates, queryOptions);
