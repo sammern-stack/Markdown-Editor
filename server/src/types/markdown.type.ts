@@ -6,4 +6,4 @@ export type MarkdownSchema = {
 } & Document;
 
 export type MarkdownQueryFilter = QueryFilter<MarkdownSchema>;
-export type MarkdownCreateBody = Partial<MarkdownSchema>;
+export type MarkdownUpdateBody = Partial<MarkdownSchema>;
