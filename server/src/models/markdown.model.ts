@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import type { MarkdownSchema } from "@/types/markdown.type.js";
+import type { MarkdownSchema } from "@/types/markdown.types.js";
 
 const markdownSchema = new Schema<MarkdownSchema>(
   {
@@ -16,5 +16,5 @@ const markdownSchema = new Schema<MarkdownSchema>(
   { timestamps: true },
 );
 
-const Markdown = model("markdown", markdownSchema)
+const Markdown = model("markdown", markdownSchema);
 export default Markdown;

@@ -3,7 +3,7 @@ import type {
   MarkdownSchema,
   MarkdownQueryFilter,
   MarkdownUpdateBody,
-} from "@/types/markdown.type.js";
+} from "@/types/markdown.types.js";
 import {
   ConflictError,
   NotFoundError,

@@ -2,7 +2,7 @@ import type { Request, Response } from "express";
 import * as markdownService from "@/services/markdown.service.js";
 import { asyncHandler } from "@/utils/asyncHandler.js";
 import { sendSuccess } from "@/utils/apiResponse.js";
-import type { MarkdownSchema } from "@/types/markdown.type.js";
+import type { MarkdownSchema } from "@/types/markdown.types.js";
 import type {
   CreateRequest,
   DeleteRequest,
