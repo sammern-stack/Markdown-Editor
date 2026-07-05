@@ -1,7 +1,6 @@
 import styles from "./MarkdownHeader.module.scss";
 import { Icon } from "@/shared/components";
 import {
-  MarkdownShowListToggle,
   OpenMarkdownTitle,
   DeleteOpenMarkdownBtn,
   SaveOpenMarkdownBtn,
@@ -10,7 +9,12 @@ import {
 export const MarkdownHeader = () => {
   return (
     <header className={styles.markdownHeader}>
-      <MarkdownShowListToggle />
+      <button
+        className={styles.markdownHeader__markdownListToggle}
+        onClick={() => {}}
+      >
+        <Icon icon="icon-menu" />
+      </button>
       <div className={styles.markdownHeader__content}>
         <div className={styles.markdownHeader__leftContent}>
           <Icon icon="logo" />
@@ -22,7 +26,12 @@ export const MarkdownHeader = () => {
           <SaveOpenMarkdownBtn />
         </div>
       </div>
-      {/* Hamburger Menu Toggle For Navigation (*Profile, Settings, Export) */}
+      <button
+        className={styles.markdownHeader__navigationToggle}
+        onClick={() => {}}
+      >
+        <Icon icon="icon-menu" />
+      </button>
     </header>
   );
 };
