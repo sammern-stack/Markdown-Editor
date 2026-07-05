@@ -8,7 +8,9 @@ export const OpenMarkdownTitle = () => {
       <div className={styles.openMarkdownTitle__content}>
         <p>Document Name</p>
         {/* // TODO: updated when you create useMarkdownStore */}
-        <input type="text" value={"welcome.md"} />
+        <div className={styles.openMarkdownTitle__input}>
+          <input type="text" value={"welcome.md"} />
+        </div>
       </div>
     </div>
   );

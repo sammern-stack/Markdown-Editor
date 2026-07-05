@@ -11,13 +11,16 @@ export const MarkdownHeader = () => {
   return (
     <header className={styles.markdownHeader}>
       <MarkdownShowListToggle />
-      <div className={styles.markdownHeader__leftContent}>
-        <Icon icon="logo" />
-        <OpenMarkdownTitle />
-      </div>
-      <div className={styles.markdownHeader__rightContent}>
-        <DeleteOpenMarkdownBtn />
-        <SaveOpenMarkdownBtn />
+      <div className={styles.markdownHeader__content}>
+        <div className={styles.markdownHeader__leftContent}>
+          <Icon icon="logo" />
+          <hr />
+          <OpenMarkdownTitle />
+        </div>
+        <div className={styles.markdownHeader__rightContent}>
+          <DeleteOpenMarkdownBtn />
+          <SaveOpenMarkdownBtn />
+        </div>
       </div>
       {/* Hamburger Menu Toggle For Navigation (*Profile, Settings, Export) */}
     </header>

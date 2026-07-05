@@ -1,0 +1,32 @@
+.markdownHeader {
+  display: flex;
+  background: var(--slate-800);
+  color: var(--neutral-000);
+
+  &__content {
+    flex: 1;
+    padding: 16px 16px 16px 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__leftContent {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    > hr {
+      align-self: stretch;
+      outline: none;
+      border: none;
+      background: var(--slate-500);
+      width: 1px;
+    }
+  }
+
+  &__rightContent {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+}

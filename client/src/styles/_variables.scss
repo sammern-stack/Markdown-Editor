@@ -1,24 +1,27 @@
-// Neutral colors
-$neutral-950: #000000;
-$neutral-500: #6f6f6f;
-$neutral-200: #e4e4e4;
-$neutral-100: #f5f5f5;
-$neutral-000: #ffffff;
-
-// Slate colors
-$slate-950: #1d1f22;
-$slate-800: #2b2d31;
-$slate-700: #35393f;
-$slate-500: #5a6069;
-$slate-400: #7c8187;
-$slate-300: #c1c4cb;
-
-// Orange colors
-$orange-600: #e46643;
-$orange-400: #f39765;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 :root {
   // Typography
-  --ff: "Roboto", sans-serif;
+  --primary-ff: "Roboto", sans-serif;
+  --secondary-ff: "Roboto Slab", sans-serif;
   --fs: 16px;
+
+  // Global Colors
+  --neutral-950: #000000;
+  --neutral-500: #6f6f6f;
+  --neutral-200: #e4e4e4;
+  --neutral-100: #f5f5f5;
+  --neutral-000: #ffffff;
+
+  // Slate colors
+  --slate-950: #1d1f22;
+  --slate-800: #2b2d31;
+  --slate-700: #35393f;
+  --slate-500: #5a6069;
+  --slate-400: #7c8187;
+  --slate-300: #c1c4cb;
+
+  // Orange colors
+  --orange-600: #e46643;
+  --orange-400: #f39765;
 }
