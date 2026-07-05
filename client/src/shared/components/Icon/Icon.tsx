@@ -3,7 +3,7 @@ import styles from "./Icon.module.scss";
 
 type SvgComponent = FC<SVGProps<SVGSVGElement>>;
 
-const icons = import.meta.glob("../../assets/*.svg", {
+const icons = import.meta.glob("../../../assets/images/*.svg", {
   eager: true,
   import: "default",
 }) as Record<string, SvgComponent>;
@@ -13,7 +13,7 @@ interface IconProps extends SVGProps<SVGSVGElement> {
 }
 
 export const Icon = ({ icon, ...props }: IconProps) => {
-  const Component = icons[`../../assets/images/${icon}.svg`];
+  const Component = icons[`../../../assets/images/${icon}.svg`];
 
   if (!Component) {
     console.warn(`Icon "${icon}" not found`);
