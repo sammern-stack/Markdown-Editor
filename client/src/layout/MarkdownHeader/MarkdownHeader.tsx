@@ -1,4 +1,5 @@
 import styles from "./MarkdownHeader.module.scss";
+import { useUiVisibilityStore } from "@/shared/stores";
 import { CiSettings } from "react-icons/ci";
 import { Icon } from "@/shared/components";
 import {
@@ -8,11 +9,13 @@ import {
 } from "@/features/markdown";
 
 export const MarkdownHeader = () => {
+  const toggle = useUiVisibilityStore((s) => s.toggle);
+
   return (
     <header className={styles.markdownHeader}>
       <button
         className={styles.markdownHeader__markdownListToggle}
-        onClick={() => {}}
+        onClick={() => toggle("markdownSidebar")}
       >
         <Icon icon="icon-menu" />
       </button>
@@ -29,7 +32,7 @@ export const MarkdownHeader = () => {
       </div>
       <button
         className={styles.markdownHeader__navigationToggle}
-        onClick={() => {}}
+        onClick={() => toggle("navigationSidebar")}
       >
         <CiSettings />
       </button>
