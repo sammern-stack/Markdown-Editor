@@ -1,9 +1,11 @@
 import styles from "./Home.module.scss";
+import { MarkdownHeader, HomeContent } from "@/layout"
 
 const Home = () => {
   return (
     <div className={styles.home}>
-      <h1>Home Page</h1>
+      <MarkdownHeader />
+      <HomeContent />
     </div>
   );
 };
