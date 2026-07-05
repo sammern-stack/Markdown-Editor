@@ -1,18 +1,18 @@
 import styles from "./HomeContent.module.scss";
 import { MarkdownEditor, MarkdownPreview } from "@/features/markdown";
 import { MarkdownSidebar, NavigationSidebar } from "@/layout";
+import { useUiVisibilityStore } from "@/shared/stores";
 
 export const HomeContent = () => {
-  // TODO: Replace this values with actual values from useSidebarStore
-  const isMarkdownSidebarOpen = false;
-  const isNavigationSidebarOpen = false;
+  const markdownFlag = useUiVisibilityStore((s) => s.flags.markdownSidebar);
+  const navigationFlag = useUiVisibilityStore((s) => s.flags.navigationSidebar);
 
   return (
     <section className={styles.home__content}>
-      {isMarkdownSidebarOpen && <MarkdownSidebar />}
+      {markdownFlag && <MarkdownSidebar />}
       <MarkdownEditor />
       <MarkdownPreview />
-      {isNavigationSidebarOpen && <NavigationSidebar />}
+      {navigationFlag && <NavigationSidebar />}
     </section>
   );
 };
