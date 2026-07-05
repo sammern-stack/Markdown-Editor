@@ -3,6 +3,17 @@
   background: var(--slate-800);
   color: var(--neutral-000);
 
+  &__markdownListToggle,
+  &__navigationToggle {
+    background: var(--slate-700);
+    color: var(--neutral-000);
+    padding: 24px;
+
+    &:hover {
+      background: var(--orange-600);
+    }
+  }
+
   &__content {
     flex: 1;
     padding: 16px 16px 16px 24px;
@@ -28,5 +39,11 @@
     display: flex;
     gap: 24px;
     align-items: center;
+  }
+
+  &__navigationToggle {
+    & > svg {
+      scale: 2.5;
+    }
   }
 }

@@ -1,4 +1,5 @@
 import styles from "./MarkdownHeader.module.scss";
+import { CiSettings } from "react-icons/ci";
 import { Icon } from "@/shared/components";
 import {
   OpenMarkdownTitle,
@@ -30,7 +31,7 @@ export const MarkdownHeader = () => {
         className={styles.markdownHeader__navigationToggle}
         onClick={() => {}}
       >
-        <Icon icon="icon-menu" />
+        <CiSettings />
       </button>
     </header>
   );
