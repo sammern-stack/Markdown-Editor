@@ -27,6 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   isolation: isolate;
+  overflow: hidden;
 }
 
 img,

@@ -7,6 +7,7 @@ export const MarkdownPreview = () => {
 
       <div className={styles.markdownPreview__preview}>
         {/* Here the user will see the markdown preview live */}
+        Preview
       </div>
     </section>
   );
