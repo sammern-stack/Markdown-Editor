@@ -1,5 +1,5 @@
-import { EMPTY_MARKDOWN_PLACEHOLDER } from "../../constants";
 import styles from "./MarkdownEditor.module.scss";
+import { EMPTY_MARKDOWN_PLACEHOLDER } from "../../constants";
 
 export const MarkdownEditor = () => {
   return (
