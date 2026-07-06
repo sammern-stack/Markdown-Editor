@@ -6,6 +6,19 @@
   min-height: 0;
 
   &__editorContent {
-    display: flex;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+
+    & > * {
+      min-height: 0;
+    }
+  }
+
+  &__divider {
+    background-color: var(--divider-color);
+    border: none;
+    width: 1px;
+    height: 100%;
   }
 }

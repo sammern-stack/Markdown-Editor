@@ -8,6 +8,7 @@ export const HomeContent = () => {
       <MarkdownSidebar />
       <div className={styles.homeContent__editorContent}>
         <MarkdownEditor />
+        <hr className={styles.homeContent__divider} />
         <MarkdownPreview />
       </div>
       <NavigationSidebar />

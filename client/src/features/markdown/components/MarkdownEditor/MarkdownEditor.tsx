@@ -1,13 +1,15 @@
+import { EMPTY_MARKDOWN_PLACEHOLDER } from "../../constants";
 import styles from "./MarkdownEditor.module.scss";
 
 export const MarkdownEditor = () => {
   return (
     <section className={styles.markdownEditor}>
-      {/* Markdown Title */}
+      <div className={styles.markdownEditor__title}>MARKDOWN</div>
 
-      <textarea className={styles.markdownEditor__textarea}>
-        {/* Here the user will be editing there markdown files */}
-      </textarea>
+      <textarea
+        className={styles.markdownEditor__textarea}
+        placeholder={EMPTY_MARKDOWN_PLACEHOLDER}
+      ></textarea>
     </section>
   );
 };

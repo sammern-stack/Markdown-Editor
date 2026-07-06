@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap");
 
 :root {
   // Typography
   --primary-ff: "Roboto", sans-serif;
+  --mono-ff: "Roboto Mono", monospace;
   --secondary-ff: "Roboto Slab", sans-serif;
   --fs: 16px;
 
@@ -24,4 +25,9 @@
   // Orange colors
   --orange-600: #e46643;
   --orange-400: #f39765;
+
+  // TODO: Move this colors to :root[data-theme="dark"] and :root[data-theme="light"]
+  --editor-title-bg: var(--neutral-100);
+  --editor-title-color: var(--slate-400);
+  --divider-color: var(--neutral-200);
 }
