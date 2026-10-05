@@ -1,0 +1,51 @@
+.openMarkdownTitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    p {
+      color: var(--slate-400);
+      font-size: 13px;
+      line-height: 115%;
+    }
+  }
+
+  &__input {
+    width: 400px;
+    position: relative;
+
+    & > input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: inherit;
+      font-size: 15px;
+      line-height: 120%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--neutral-000);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::before,
+    &:has(input:focus)::before {
+      width: 100%;
+    }
+  }
+}

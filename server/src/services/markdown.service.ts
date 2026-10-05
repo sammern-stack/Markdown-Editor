@@ -21,7 +21,7 @@ const searchMarkdown = async (idOrMeta: string | MarkdownQueryFilter) => {
     ? await Markdown.findById(idOrMeta as string)
     : await Markdown.findOne(idOrMeta as MarkdownQueryFilter);
 
-  if (!markdown) throw new NotFoundError("markdown");
+  if (!markdown) return null;
 
   return markdown;
 };
@@ -31,7 +31,9 @@ export const getAllMarkdowns = async () => {
 };
 
 export const getMarkdownById = async (id: string) => {
-  return await searchMarkdown(id);
+  const markdown = await searchMarkdown(id);
+  if (!markdown) throw new NotFoundError("Markdown not found");
+  return markdown;
 };
 
 export const createNewMarkdown = async (markdown: MarkdownSchema) => {
@@ -44,11 +46,13 @@ export const updateMarkdown = async (
   id: string,
   updates: MarkdownUpdateBody,
 ) => {
-  const { _id } = await searchMarkdown(id);
-  return await Markdown.findByIdAndUpdate(_id, updates, queryOptions);
+  const markdown = await searchMarkdown(id);
+  if (!markdown) throw new NotFoundError("Markdown not found");
+  return await Markdown.findByIdAndUpdate(markdown._id, updates, queryOptions);
 };
 
 export const deleteMarkdown = async (id: string) => {
-  const { _id } = await searchMarkdown(id);
-  await Markdown.findByIdAndDelete(_id);
+  const markdown = await searchMarkdown(id);
+  if (!markdown) throw new NotFoundError("Markdown not found");
+  await Markdown.findByIdAndDelete(markdown._id);
 };

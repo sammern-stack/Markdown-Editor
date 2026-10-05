@@ -1,0 +1,15 @@
+.saveOpenMarkdownBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  background: var(--orange-600);
+  font-size: 15px;
+  line-height: 170%;
+  color: var(--neutral-000);
+
+  &:hover {
+    background: var(--orange-400);
+  }
+}

@@ -22,10 +22,6 @@ export const sendError = (
   message: string,
   statusCode = 500,
 ): void => {
-  const failed = {
-    ok: false,
-    msg: message,
-  };
-
+  const failed = { ok: false, message };
   res.status(statusCode).json(failed);
 };

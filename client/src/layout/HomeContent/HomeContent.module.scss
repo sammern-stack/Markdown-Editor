@@ -1,0 +1,24 @@
+.homeContent {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+
+  &__editorContent {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+
+    & > * {
+      min-height: 0;
+    }
+  }
+
+  &__divider {
+    background-color: var(--divider-color);
+    border: none;
+    width: 1px;
+    height: 100%;
+  }
+}

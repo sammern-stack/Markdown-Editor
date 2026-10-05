@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Spinner } from "@/components/ui";
+import { Spinner } from "@/shared/components";
 
 const HomePage = lazy(() => import("@/pages/Home/Home"));
 const NotFoundPage = lazy(() => import("@/pages/NotFound/NotFound"));
